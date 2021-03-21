@@ -148,3 +148,21 @@ void insertItemIterator(Node iterator, List list, void* el);
  * @param list the list.
  */
 void removeItemIterator(Node iterator, List list);
+
+/**
+ * @brief Moves the iterator of a certain amount of hopes.
+ * 
+ * @param iterator the current iterator.
+ * @param list the list.
+ * @param count the number of hopes. if (count < 0) then the iterator will moves backword, if (count > 0) it will moves forward.
+ */
+Node moveIterator(Node iterator, List list, int count);
+
+
+/**
+ * @brief Checks if the current iterator is on a valid position.
+ * 
+ * @param iterator the current iterator.
+ * @return 1 if the iterator is valid, 0 otherwise. 
+ */
+int isValidIterator(Node iterator);

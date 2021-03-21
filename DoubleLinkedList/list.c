@@ -226,6 +226,24 @@ void removeItemIterator(Node iterator, List list)
     }
 }
 
+Node moveIterator(Node iterator, List list, int count)
+{
+    Node (*function)(List list, Node iterator);
+    
+    function = count < 0 ? getPrevIterator : getNextIterator;
+    count = count < 0 ? count * (-1) : count;
+
+    for (int i = 0; i < count; i++)
+        iterator = function(list, iterator);
+    
+    return iterator;
+}
+
+int isValidIterator(Node iterator)
+{
+    return (iterator != NULL);
+}
+
 // helping functions
 
 void insertNode(List list, void* el, int pos)
